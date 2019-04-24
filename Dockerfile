@@ -4,7 +4,7 @@ LABEL maintainer="Nate Wilken <wilken@asu.edu>"
 WORKDIR /home/app
 RUN addgroup -g 1000 app \
  && adduser -D -h /home/app -s /bin/bash -u 1000 -G app app \
- && chmod 755 .
+ && chmod 755 . \
  && chown -R app:app .
 
 RUN apk update \
